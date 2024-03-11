@@ -1,0 +1,9 @@
+{
+  "name": "Cpp STL Redefined",
+  "short_name": "STL Redefined",
+  "description": "List of C++ STL Libraries",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000"
+}
