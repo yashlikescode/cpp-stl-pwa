@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+body {
+  margin: 0;
+  padding: 0;
+  height: var(--image-height);
+  background-color: #9CA7B1;
+}
+
+
+    </style>
+  </head>
+  <body style="margin:0;padding:0;align-self:left;overflow:auto;">
+    <div class="image-container">
+      <img id="myImage" style="margin:0;padding:0;" src="templateClass.png">
+    </div>
+    <script>
+window.onload = function() {
+  var imageHeight = document.getElementById("myImage").clientHeight;
+  document.documentElement.style.setProperty("--image-height", imageHeight + "px");
+};
+// Get the current zoom level
+var currentZoom = document.documentElement.style.zoom || 1;
+
+// Set the amount to zoom out
+var zoomOutAmount = 0.3; // Adjust the value as needed
+
+// Zoom out the page twice
+for (var i = 0; i < 2; i++) {
+  // Calculate the new zoom level
+  var newZoom = parseFloat(currentZoom) - zoomOutAmount;
+
+  // Apply the new zoom level to the page
+  document.documentElement.style.zoom = newZoom;
+
+  // Update the current zoom level for the next iteration
+  currentZoom = newZoom;
+}
+
+    </script>
+  </body>
+</html>
