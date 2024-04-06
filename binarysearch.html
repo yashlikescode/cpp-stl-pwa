@@ -2,43 +2,67 @@
 <html>
   <head>
     <style>
-body {
-  margin: 0;
-  padding: 0;
-  height: var(--image-height);
-  background-color: #9CA7B1;
-}
-
-
+      body {
+        margin: 0;
+        padding: 0;
+        height: var(--image-height);
+        background-color: #9ca7b1;
+      }
     </style>
   </head>
-  <body style="margin:0;padding:0;align-self:left;overflow:auto;">
+  <body style="margin: 0; padding: 0; align-self: left; overflow: auto">
+    <a href="index.html"
+      ><button
+        style="
+          display: fixed;
+          margin-top: 1cm;
+          margin-left: 1cm;
+          height: 3cm;
+          width: 3.5cm;
+          border-radius: 0.5cm;
+          background-color: rgb(146, 146, 146);
+        "
+      >
+        <svg
+          width="2cm"
+          height="2cm"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 448 512"
+        >
+          <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+          <path
+            d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"
+          />
+        </svg></button
+    ></a>
     <div class="image-container">
-      <img id="myImage" style="margin:0;padding:0;" src="binarysearch.png">
+      <img id="myImage" style="margin: 0; padding: 0" src="binarysearch.png" />
     </div>
     <script>
-window.onload = function() {
-  var imageHeight = document.getElementById("myImage").clientHeight;
-  document.documentElement.style.setProperty("--image-height", imageHeight + "px");
-};
-// Get the current zoom level
-var currentZoom = document.documentElement.style.zoom || 1;
+      window.onload = function () {
+        var imageHeight = document.getElementById("myImage").clientHeight;
+        document.documentElement.style.setProperty(
+          "--image-height",
+          imageHeight + "px"
+        );
+      };
+      // Get the current zoom level
+      var currentZoom = document.documentElement.style.zoom || 1;
 
-// Set the amount to zoom out
-var zoomOutAmount = 0.3; // Adjust the value as needed
+      // Set the amount to zoom out
+      var zoomOutAmount = 0.3; // Adjust the value as needed
 
-// Zoom out the page twice
-for (var i = 0; i < 2; i++) {
-  // Calculate the new zoom level
-  var newZoom = parseFloat(currentZoom) - zoomOutAmount;
+      // Zoom out the page twice
+      for (var i = 0; i < 2; i++) {
+        // Calculate the new zoom level
+        var newZoom = parseFloat(currentZoom) - zoomOutAmount;
 
-  // Apply the new zoom level to the page
-  document.documentElement.style.zoom = newZoom;
+        // Apply the new zoom level to the page
+        document.documentElement.style.zoom = newZoom;
 
-  // Update the current zoom level for the next iteration
-  currentZoom = newZoom;
-}
-
+        // Update the current zoom level for the next iteration
+        currentZoom = newZoom;
+      }
     </script>
   </body>
 </html>
